@@ -1,0 +1,155 @@
+:root{
+    --bkg: hsl(30, 38%, 92%);
+    --bkg-card: hsl(0, 0%, 100%);
+    --primary-btn:  hsl(158, 36%, 37%);
+    --primary-btn-hover: hsl(158, 42%, 18%);
+    --sec-text: hsl(212, 21%, 14%);
+    --pri-text: hsl(228, 12%, 48%);
+}
+
+
+
+
+html{
+    font-size: 62.5%;
+
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bkg);
+    min-height: 100vh;
+    color: var(--pri-text);
+    font-family: 'Montserrat';
+    font-weight:500;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--------------------container----------------*/
+.price-card-container{
+ max-width: 600px;
+ background-color: var(--bkg-card);
+ border-radius: 10px;
+ overflow:hidden;
+ box-shadow: 2px 2px 2px black;
+
+ display:flex;
+
+}
+
+/*------------------image----------------------*/
+#art-pic{
+    width: 50%;
+    
+   
+}
+.art{
+    display:block;
+    width: 100%;
+    object-fit:cover;
+}
+
+/*----------------text-----------------*/
+
+#text-content{
+    width: 50%;
+    padding:2rem;
+
+    display: flex;
+    flex-direction:column;
+    gap: 2rem;
+
+}
+
+h1{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 4rem;
+    color: var(--sec-text);
+    line-height: 1;
+}
+
+#description{
+    font-size: 2rem;
+}
+
+#price{
+    font-size: 3rem;
+    color: var(--primary-btn);
+    font-weight:800;
+
+    display:flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+#beforeprice{
+    font-size: 1.5rem;
+    color: var(--pri-text);
+   
+}
+
+#btn{
+    background-color: var(--primary-btn);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  background-color 0.2s;
+
+    display:flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#btn:hover{
+    background-color: var(--primary-btn-hover);
+
+}
+
+/*------------footer-----------------*/
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
+@media(max-width: 37.2rem){
+    html{
+        font-size: 56.25%;
+    }
+
+    #text-content{
+    padding:2rem 3.5rem;
+    gap: 3rem;
+    }
+   
+}
